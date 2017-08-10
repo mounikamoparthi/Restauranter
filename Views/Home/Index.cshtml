@@ -1,5 +1,29 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
-<h1>Default Blank Page~</h1>
-<p>Get to adding stuff</p>
+@model restaranter.Models.Person
+
+<form asp-controller="User" asp-action="user" method="post">
+                <p>
+                <label asp-for="UserName">UserName:</label>
+                <input asp-for="UserName" id ="UserName" name="UserName">
+                </p>
+                <p>
+                <label asp-for="RestauName">RestauName:</label>
+                <input asp-for="RestauName" id ="RestauName" name="RestauName">
+                </p>
+                <p>
+                <label asp-for="Review">Review:</label>
+                <input asp-for="Review" id ="Review" name="Review">
+
+                </p><p>
+                <label asp-for="VisitDate">VisitDate:</label>
+                <input asp-for="VisitDate" id ="VisitDate" name="VisitDate">
+                </p><p>
+                    <label asp-for="Stars"></label>
+                    <select asp-for="Stars">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                    </select>
+                <button type="submit">Submit
+</form>
