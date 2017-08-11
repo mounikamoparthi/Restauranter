@@ -1,6 +1,15 @@
-@model restaranter.Models.Person
+<html>
+    <title> Restaurant Review </title>
+    <body>
+        @{
+            ViewData["Title"] = "Home Page";
+        }
 
-<form asp-controller="User" asp-action="user" method="post">
+    
+@model restauranter.Models.Person
+<h3> Restaurant Review </h3>
+
+<form asp-controller="Home" asp-action="Create" method="post">
                 <p>
                 <label asp-for="UserName">UserName:</label>
                 <input asp-for="UserName" id ="UserName" name="UserName">
@@ -15,7 +24,7 @@
 
                 </p><p>
                 <label asp-for="VisitDate">VisitDate:</label>
-                <input asp-for="VisitDate" id ="VisitDate" name="VisitDate">
+                <input asp-for="VisitDate" type= "date" name="VisitDate">
                 </p><p>
                     <label asp-for="Stars"></label>
                     <select asp-for="Stars">
@@ -27,3 +36,5 @@
                     </select>
                 <button type="submit">Submit
 </form>
+    </body>
+</html>
